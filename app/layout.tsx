@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Dolly Pandey | Data Analyst Portfolio",
   description:
-    "Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation.",
+    "Professional Data Analyst Portfolio showcasing SQL, Python, Power BI, Business Intelligence, AI Automation and real-world analytics projects.",
   keywords: [
     "Dolly Pandey",
     "Data Analyst",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dolly Pandey | Data Analyst Portfolio",
     description:
-      "Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation.",
+      "Professional Data Analyst Portfolio showcasing SQL, Python, Power BI, Business Intelligence, AI Automation and real-world analytics projects.",
     url: siteUrl,
     siteName: "Dolly Pandey Data Analyst Portfolio",
     images: [
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dolly Pandey | Data Analyst Portfolio",
     description:
-      "Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation.",
+      "Professional Data Analyst Portfolio showcasing SQL, Python, Power BI, Business Intelligence, AI Automation and real-world analytics projects.",
     images: [ogImageUrl],
   },
   robots: {
@@ -95,25 +95,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <head>
-        <meta name="image" property="og:image" content={ogImageUrl} />
-        <meta property="og:title" content="Dolly Pandey | Data Analyst Portfolio" />
-        <meta
-          property="og:description"
-          content="Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation."
-        />
-        <meta property="og:url" content={siteUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:image:secure_url" content={ogImageUrl} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Dolly Pandey | Data Analyst Portfolio" />
-        <meta
-          name="twitter:description"
-          content="Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation."
-        />
-        <meta name="twitter:image" content={ogImageUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
