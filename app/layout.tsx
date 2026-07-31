@@ -25,6 +25,7 @@ const mono = JetBrains_Mono({
 });
 
 const siteUrl = "https://portfolio-dolly-pandey.vercel.app";
+const ogImageUrl = `${siteUrl}/og-image.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -52,7 +53,14 @@ export const metadata: Metadata = {
       "Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation.",
     url: siteUrl,
     siteName: "Dolly Pandey Data Analyst Portfolio",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: "Dolly Pandey Data Analyst Portfolio Preview",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -61,7 +69,7 @@ export const metadata: Metadata = {
     title: "Dolly Pandey | Data Analyst Portfolio",
     description:
       "Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation.",
-    images: ["/og-image.png"],
+    images: [ogImageUrl],
   },
   robots: {
     index: true,
@@ -87,6 +95,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <head>
+        <meta property="og:title" content="Dolly Pandey | Data Analyst Portfolio" />
+        <meta
+          property="og:description"
+          content="Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation."
+        />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:secure_url" content={ogImageUrl} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dolly Pandey | Data Analyst Portfolio" />
+        <meta
+          name="twitter:description"
+          content="Data Analyst specializing in SQL, Python, Power BI, Business Intelligence, Data Visualization and AI Automation."
+        />
+        <meta name="twitter:image" content={ogImageUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
