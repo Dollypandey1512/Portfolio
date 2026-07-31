@@ -504,7 +504,7 @@ export default function SupplyChainAnalyticsCaseStudy() {
               <Github size={16} /> GitHub Repository
             </a>
             <a
-              href="https://github.com/Dollypandey1512/Supply-Chain-Analytics/blob/main/Presentation/capestone_ppt.pptx"
+              href="https://github.com/Dollypandey1512/Supply-Chain-Analytics/blob/main/capestone_ppt.pptx"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass font-bold text-sm text-white hover:bg-surface-2 transition-all border border-line"
