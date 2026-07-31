@@ -59,7 +59,7 @@ export default function SupplyChainAnalyticsCaseStudy() {
               IIIT Bangalore Capstone
             </span>
             <a
-              href="https://github.com/Dollypandey1512"
+              href="https://github.com/Dollypandey1512/Supply-Chain-Analytics"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-1.5 rounded-full bg-ink text-base hover:bg-accent-soft transition-colors"
@@ -651,7 +651,7 @@ export default function SupplyChainAnalyticsCaseStudy() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://github.com/Dollypandey1512"
+              href="https://github.com/Dollypandey1512/Supply-Chain-Analytics"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-base font-medium text-sm hover:bg-accent-soft transition-colors shadow-lg"
@@ -659,7 +659,7 @@ export default function SupplyChainAnalyticsCaseStudy() {
               <Github size={16} /> GitHub Repository
             </a>
             <a
-              href="https://github.com/Dollypandey1512"
+              href="https://github.com/Dollypandey1512/Supply-Chain-Analytics"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass font-medium text-sm hover:-translate-y-0.5 transition-all"
