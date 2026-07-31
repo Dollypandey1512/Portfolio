@@ -12,7 +12,9 @@ export interface Project {
   learning: string;
   github: string;
   demo?: string | null;
+  caseStudyLink?: string | null;
   featured: boolean;
+  isFlagship?: boolean;
 }
 
 export const profile = {
@@ -138,6 +140,29 @@ export const experience = [
 
 export const projects: Project[] = [
   {
+    title: "Supply Chain Analytics — Open-Pit Mining Equipment",
+    tagline: "⭐ IIIT Bangalore Executive PG Capstone: Equipment utilization, payload optimization, and operational bottleneck reduction.",
+    problem: "Open-pit mining operations heavily depend on efficient equipment utilization. Poor equipment performance directly inflates operational costs, reduces production output, compromises payload efficiency, and increases unscheduled maintenance.",
+    businessObjective: "Analyze equipment-level operational performance, study production trends, evaluate payload utilization vs. trip frequency, and deliver actionable data-driven recommendations to maximize mining productivity.",
+    dataset: "Operational equipment logs including daily production tonnage, trip counts, payload utilization %, equipment maintenance status, and operational cycle times.",
+    toolsUsed: ["Power BI", "MySQL", "SQL", "Excel", "PowerPoint"],
+    approach: "Modeled a relational star-schema in MySQL; executed advanced SQL CTEs & window functions to analyze trip efficiency and payload variance; built interactive Power BI executive dashboards for operational monitoring.",
+    dashboard: "Multi-tab Power BI executive dashboard featuring equipment performance metrics, production trends, trips vs. production correlation, payload utilization distributions, and low-performing asset alerts.",
+    keyInsights: [
+      "Pareto Distribution in Equipment Output: A small fraction of active equipment accounted for the majority of total tonnage output.",
+      "Trip Frequency vs. Productivity Decoupling: High trip frequency did not always correspond to higher production due to partial payload loads.",
+      "Payload Utilization as Efficiency Driver: Payload utilization emerged as the single strongest indicator of overall operational productivity.",
+      "Asset Tail-End Drag: Several active assets delivered disproportionately low output while incurring full operational and maintenance costs.",
+    ],
+    businessImpact: "Formulated operational strategies projected to optimize payload capacity, streamline dispatch planning, prioritize preventive maintenance, and reduce equipment idle costs.",
+    learning: "Demonstrated master-level proficiency in dimensional modeling, SQL analysis, BI dashboard design, KPI tracking, and executive stakeholder communication.",
+    github: "https://github.com/Dollypandey1512",
+    demo: null,
+    caseStudyLink: "/projects/supply-chain-analytics",
+    featured: true,
+    isFlagship: true,
+  },
+  {
     title: "Namma Yatri Case Study — Ride-Hailing Analytics",
     tagline: "Uncovering spatial-temporal demand patterns and trip cancellation bottlenecks in urban mobility.",
     problem: "Ride-hailing platforms face driver supply shortages and high trip cancellation rates during peak hours without granular visibility into micro-zone demand.",
@@ -152,25 +177,6 @@ export const projects: Project[] = [
     ],
     businessImpact: "Formulated driver incentive reallocation strategies projected to reduce peak-hour cancellations by ~18% and improve fleet utilization.",
     learning: "Gained deep understanding of spatial-temporal funnel analysis and dynamic pricing levers in two-sided marketplace analytics.",
-    github: "https://github.com/Dollypandey1512",
-    demo: null,
-    featured: true,
-  },
-  {
-    title: "Supply Chain Analytics — Open-Pit Mining Capstone",
-    tagline: "Near real-time equipment tracking and operational bottleneck elimination for open-pit mining.",
-    problem: "Uncoordinated digger-crusher operations in an open-pit mine created severe bottlenecking, unplanned haul truck idling, and throughput delays.",
-    businessObjective: "Develop a near real-time operational dashboard to track crusher throughput, digger availability, and queue times to maximize daily tonnage yield.",
-    dataset: "IoT sensor telemetry, dump truck dispatch timestamps, equipment maintenance logs, crusher dump records, and tonnage feeds.",
-    toolsUsed: ["MySQL", "Tableau", "Power BI", "Excel"],
-    approach: "Modeled a relational star-schema in MySQL; crafted optimized SQL CTEs and window functions to compute equipment uptime and queue cycle times; integrated automated Power BI & Tableau dashboards.",
-    dashboard: "Live executive reporting suite tracking real-time crusher queue status, digger availability vs. idle percentage, and hourly tonnage throughput.",
-    keyInsights: [
-      "Discovered that unsynchronized truck dispatching caused 27% of total operational downtime due to queue congestion at primary crushers.",
-      "Identified specific shift changes associated with a 40-minute drop in processing capacity.",
-    ],
-    businessImpact: "Designed a staggered haul dispatch schedule projected to increase hourly crusher utilization by 15% and cut equipment idle costs.",
-    learning: "Mastered dimensional data modeling (Star Schema), SQL performance tuning, and operational KPI reporting for industrial supply chains.",
     github: "https://github.com/Dollypandey1512",
     demo: null,
     featured: true,
