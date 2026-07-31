@@ -51,7 +51,7 @@ export const stats = [
 export const skills = [
   {
     category: "Programming & Querying",
-    items: ["Python", "SQL (window functions, CTEs, query optimisation)", "JavaScript", "VBA", "Regex"],
+    items: ["Python", "SQL (window functions, CTEs, query optimisation)"],
   },
   {
     category: "Data Analytics",
@@ -105,7 +105,7 @@ export const skills = [
   },
   {
     category: "AI & Automation",
-    items: ["Claude", "ChatGPT", "OpenAI Codex", "Cowork", "Smartlead AI", "n8n", "Prompt Engineering"],
+    items: ["Claude", "ChatGPT", "OpenAI Codex", "n8n", "Prompt Engineering"],
   },
   {
     category: "Databases",
