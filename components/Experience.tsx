@@ -23,9 +23,9 @@ export default function Experience() {
         <div className="space-y-8">
           {experience.map((job, i) => (
             <Reveal delay={i * 0.1} key={job.org}>
-              <div className="glass rounded-2xl p-6 md:p-8 border border-line/80 bg-surface-2/70 space-y-6 shadow-lg">
+              <div className="glass rounded-2xl p-6 md:p-8 border border-line bg-surface-2/90 space-y-6 shadow-xl">
                 {/* Header */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-line pb-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-line/80 pb-4">
                   <div>
                     <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-full bg-accent/20 text-accent-soft font-semibold mb-2">
                       <Briefcase size={13} /> {job.role}
@@ -42,14 +42,14 @@ export default function Experience() {
                 </div>
 
                 {/* Bullets */}
-                <ul className="space-y-3.5 pt-1">
+                <ul className="space-y-4 pt-1">
                   {job.points.map((point) => (
                     <li
                       key={point}
-                      className="text-slate-100 text-sm md:text-base leading-relaxed pl-7 relative flex items-start gap-3"
+                      className="text-white text-sm md:text-base leading-relaxed font-normal flex items-start gap-3 bg-surface/40 p-3.5 rounded-xl border border-line/50"
                     >
-                      <CheckCircle2 size={18} className="text-accent-soft shrink-0 mt-1" />
-                      <span>{point}</span>
+                      <CheckCircle2 size={18} className="text-accent-soft shrink-0 mt-0.5" />
+                      <span className="text-slate-100">{point}</span>
                     </li>
                   ))}
                 </ul>
