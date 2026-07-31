@@ -165,7 +165,7 @@ export default function SupplyChainAnalyticsCaseStudy() {
         </section>
 
         {/* 2. BUSINESS PROBLEM */}
-        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-6 bg-surface-2/60">
+        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-6 bg-surface-2/80">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-lg bg-accent/20 flex items-center justify-center text-accent-soft">
               <Target size={20} />
@@ -176,7 +176,7 @@ export default function SupplyChainAnalyticsCaseStudy() {
             </div>
           </div>
 
-          <div className="space-y-4 text-slate-200 text-sm md:text-base leading-relaxed">
+          <div className="space-y-4 text-slate-100 text-sm md:text-base leading-relaxed">
             <p>
               Open-pit mining operations depend heavily on efficient equipment utilization to maximize production while minimizing operational costs.
             </p>
@@ -187,24 +187,24 @@ export default function SupplyChainAnalyticsCaseStudy() {
               <div className="glass p-4 rounded-xl border border-red-500/30 bg-red-500/10 space-y-1">
                 <ShieldAlert size={20} className="text-red-400" />
                 <h3 className="font-display font-semibold text-sm text-white">Higher Cost per Ton</h3>
-                <p className="text-xs text-slate-300">Increased operating and maintenance expenses without proportional tonnage output.</p>
+                <p className="text-xs text-slate-100">Increased operating and maintenance expenses without proportional tonnage output.</p>
               </div>
               <div className="glass p-4 rounded-xl border border-amber-500/30 bg-amber-500/10 space-y-1">
                 <TrendingDown size={20} className="text-amber-400" />
                 <h3 className="font-display font-semibold text-sm text-white">Lower Production Efficiency</h3>
-                <p className="text-xs text-slate-300">Bottlenecks and uneven utilization reducing overall mine haulage throughput.</p>
+                <p className="text-xs text-slate-100">Bottlenecks and uneven utilization reducing overall mine haulage throughput.</p>
               </div>
               <div className="glass p-4 rounded-xl border border-purple-500/30 bg-purple-500/10 space-y-1">
                 <Wrench size={20} className="text-purple-400" />
                 <h3 className="font-display font-semibold text-sm text-white">Increased Maintenance Overhead</h3>
-                <p className="text-xs text-slate-300">Active usage of low-performing equipment driving up wear and repair costs.</p>
+                <p className="text-xs text-slate-100">Active usage of low-performing equipment driving up wear and repair costs.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* 3. OBJECTIVE */}
-        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/60">
+        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/80">
           <h2 className="font-display text-2xl font-bold text-white flex items-center gap-2">
             <CheckCircle2 size={22} className="text-accent-soft" /> Project Objectives
           </h2>
@@ -216,10 +216,10 @@ export default function SupplyChainAnalyticsCaseStudy() {
               { title: "Analyze Trips vs. Production", desc: "Study the relationship between trip count and actual tonnage production." },
               { title: "Recommend Operational Improvements", desc: "Generate actionable recommendations for dispatch, maintenance, and asset management." },
             ].map((obj, i) => (
-              <div key={i} className="glass p-4 rounded-xl border border-line space-y-1 bg-surface/50">
+              <div key={i} className="glass p-4 rounded-xl border border-line space-y-1 bg-surface/80">
                 <span className="font-mono text-xs text-accent-soft font-bold block">Objective {i + 1}</span>
                 <h3 className="font-display font-semibold text-sm text-white">{obj.title}</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">{obj.desc}</p>
+                <p className="text-xs text-slate-100 leading-relaxed">{obj.desc}</p>
               </div>
             ))}
           </div>
@@ -227,31 +227,31 @@ export default function SupplyChainAnalyticsCaseStudy() {
 
         {/* 4. DATASET & TOOLS */}
         <section className="grid md:grid-cols-2 gap-8">
-          <div className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/60">
+          <div className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/80">
             <h2 className="font-display text-xl font-bold text-white flex items-center gap-2">
               <Database size={20} className="text-accent-soft" /> Dataset & Metrics Analyzed
             </h2>
             <div className="grid grid-cols-2 gap-3 text-xs font-mono">
-              <div className="glass p-3 rounded-lg border border-line bg-surface/50">
+              <div className="glass p-3 rounded-lg border border-line bg-surface/80">
                 <span className="text-accent-soft font-semibold block">Equipment-wise Production</span>
-                <span className="text-slate-300">Tonnage output per machine</span>
+                <span className="text-slate-100">Tonnage output per machine</span>
               </div>
-              <div className="glass p-3 rounded-lg border border-line bg-surface/50">
+              <div className="glass p-3 rounded-lg border border-line bg-surface/80">
                 <span className="text-accent-soft font-semibold block">Trips per Day</span>
-                <span className="text-slate-300">Completed haul trip frequency</span>
+                <span className="text-slate-100">Completed haul trip frequency</span>
               </div>
-              <div className="glass p-3 rounded-lg border border-line bg-surface/50">
+              <div className="glass p-3 rounded-lg border border-line bg-surface/80">
                 <span className="text-accent-soft font-semibold block">Payload Utilization %</span>
-                <span className="text-slate-300">Loading capacity ratio</span>
+                <span className="text-slate-100">Loading capacity ratio</span>
               </div>
-              <div className="glass p-3 rounded-lg border border-line bg-surface/50">
+              <div className="glass p-3 rounded-lg border border-line bg-surface/80">
                 <span className="text-accent-soft font-semibold block">Maintenance Status</span>
-                <span className="text-slate-300">Active vs maintenance counts</span>
+                <span className="text-slate-100">Active vs maintenance counts</span>
               </div>
             </div>
           </div>
 
-          <div className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/60">
+          <div className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/80">
             <h2 className="font-display text-xl font-bold text-white flex items-center gap-2">
               <Wrench size={20} className="text-accent-soft" /> Tools Used
             </h2>
@@ -276,17 +276,17 @@ export default function SupplyChainAnalyticsCaseStudy() {
         </section>
 
         {/* 5. TEAM & MY CONTRIBUTION */}
-        <section className="glass rounded-xl2 p-8 border-l-4 border-accent bg-surface-2/80 space-y-4">
+        <section className="glass rounded-xl2 p-8 border-l-4 border-accent bg-surface-2/90 space-y-4">
           <div className="flex items-center gap-3">
             <Users size={22} className="text-accent-soft" />
             <h2 className="font-display text-2xl font-bold text-white">Team Capstone Project & My Contribution</h2>
           </div>
-          <p className="text-sm md:text-base text-slate-200 leading-relaxed">
+          <p className="text-sm md:text-base text-slate-100 font-medium leading-relaxed">
             This was the final team capstone project completed during the <strong className="text-white">Executive PG Programme in Data Science & AI at IIIT Bangalore</strong>.
           </p>
-          <div className="glass p-5 rounded-xl border border-accent/40 bg-accent/10">
-            <span className="font-mono text-xs text-accent-soft font-semibold uppercase tracking-wider block mb-1">My Specific Contributions</span>
-            <p className="text-sm md:text-base text-white font-mono leading-relaxed">
+          <div className="glass p-5 rounded-xl border border-accent/60 bg-surface/90">
+            <span className="font-mono text-xs text-sky-300 font-bold uppercase tracking-wider block mb-1">My Specific Contributions</span>
+            <p className="text-sm md:text-base text-white font-mono font-medium leading-relaxed">
               &quot;My contributions included SQL-based data preparation, Power BI dashboard development, data analysis, business insight generation, visualization, and presentation support.&quot;
             </p>
           </div>
