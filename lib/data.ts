@@ -120,20 +120,11 @@ export const experience = [
     org: "Devot AI",
     date: "Nov 2025 – May 2026",
     points: [
-      "Tracked and analyzed core digital KPIs—including CTR, conversion funnels, organic traffic, and keyword positioning—across client web properties using Google Analytics and Search Console.",
-      "Monitored lead-generation funnel metrics across 12+ content topic clusters, leveraging Smartlead AI and automated outreach workflows to optimize conversion rates across the lead lifecycle.",
-      "Executed complex SQL queries and designed automated ETL data integration pipelines in n8n, streamlining multi-source data extraction, transformation, and daily executive reporting.",
-      "Performed anomaly detection on search and funnel performance datasets to identify keyword cannibalization and traffic drop-offs, delivering actionable optimization recommendations to stakeholders.",
-      "Collaborated with cross-functional technical teams to maintain web analytics tracking and support data-driven digital product updates.",
-    ],
-  },
-  {
-    role: "GenAI Data Analytics Simulation Intern",
-    org: "Tata iQ (Forage)",
-    date: "June 2025",
-    points: [
-      "Conducted exploratory data analysis (EDA) using GenAI tools to identify data quality anomalies, outliers, and trend indicators across complex enterprise datasets.",
-      "Engineered predictive features and created visual analytical summaries to present executive-level recommendations for strategic business decision-making.",
+      "Analyzed digital performance KPIs (CTR, organic search traffic, keyword positioning) across client web properties in Google Analytics & Search Console, delivering actionable optimization insights to stakeholders.",
+      "Engineered automated ETL data integration pipelines in n8n and SQL to consolidate multi-channel data streams, reducing manual daily reporting effort by 40%.",
+      "Monitored lead-generation conversion funnels across 12+ content topic clusters using Smartlead AI automation, tracking funnel drop-offs and optimizing lead lifecycle progression.",
+      "Performed anomaly detection on search and funnel performance datasets to catch keyword cannibalization and traffic drop-offs early, preventing potential organic revenue loss.",
+      "Collaborated with cross-functional technical teams to maintain web analytics event tracking and translate raw data logs into clear executive performance reports.",
     ],
   },
 ];

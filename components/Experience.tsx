@@ -1,47 +1,55 @@
 import { experience } from "@/lib/data";
 import Reveal from "./Reveal";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, CheckCircle2 } from "lucide-react";
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-pad">
-      <div className="mx-auto max-w-4xl px-6">
+    <section id="experience" className="section-pad bg-surface/30">
+      <div className="mx-auto max-w-4xl px-6 space-y-12">
         <Reveal>
-          <p className="font-mono text-sm text-accent-soft mb-3">
-            03 — Experience
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-14 max-w-xl">
-            Analytics & Automation in Action.
-          </h2>
+          <div className="space-y-2">
+            <span className="font-mono text-sm text-accent-soft font-semibold tracking-wider block uppercase">
+              03 — Professional Experience
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
+              Data Analytics & Impact in Production
+            </h2>
+            <p className="text-slate-200 text-base max-w-xl">
+              Real-world industry experience delivering data analytics, funnel monitoring, ETL automation, and business intelligence solutions.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="relative border-l border-line ml-3 space-y-12">
+        <div className="space-y-8">
           {experience.map((job, i) => (
-            <Reveal delay={i * 0.12} key={job.org}>
-              <div className="relative pl-10">
-                <span className="absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full bg-accent shadow-glow" />
+            <Reveal delay={i * 0.1} key={job.org}>
+              <div className="glass rounded-2xl p-6 md:p-8 border border-line/80 bg-surface-2/70 space-y-6 shadow-lg">
+                {/* Header */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-line pb-4">
+                  <div>
+                    <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-full bg-accent/20 text-accent-soft font-semibold mb-2">
+                      <Briefcase size={13} /> {job.role}
+                    </span>
+                    <h3 className="font-display text-2xl font-bold text-white">
+                      {job.org}
+                    </h3>
+                  </div>
 
-                <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-                  <h3 className="font-display text-xl font-semibold text-ink flex items-center gap-2">
-                    <Briefcase size={18} className="text-accent-soft inline" />
-                    {job.role}
-                  </h3>
-                  <span className="font-mono text-xs text-ink-dim flex items-center gap-1">
-                    <Calendar size={13} />
+                  <span className="inline-flex items-center gap-1.5 font-mono text-xs text-amber-300 font-semibold px-3.5 py-1.5 rounded-lg bg-surface border border-line w-fit">
+                    <Calendar size={14} />
                     {job.date}
                   </span>
                 </div>
-                <p className="font-mono text-sm text-accent-soft mb-5 font-medium">
-                  {job.org}
-                </p>
 
-                <ul className="space-y-3">
+                {/* Bullets */}
+                <ul className="space-y-3.5 pt-1">
                   {job.points.map((point) => (
                     <li
                       key={point}
-                      className="text-ink-dim text-sm md:text-base leading-relaxed pl-5 relative before:content-[''] before:absolute before:left-0 before:top-2.5 before:h-1.5 before:w-1.5 before:rounded-full before:bg-accent-soft"
+                      className="text-slate-100 text-sm md:text-base leading-relaxed pl-7 relative flex items-start gap-3"
                     >
-                      {point}
+                      <CheckCircle2 size={18} className="text-accent-soft shrink-0 mt-1" />
+                      <span>{point}</span>
                     </li>
                   ))}
                 </ul>
