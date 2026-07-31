@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #08090c;
+  color: #e7e8ec;
+}
+
+::selection {
+  background: #7c8cff;
+  color: #08090c;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1116;
+}
+::-webkit-scrollbar-thumb {
+  background: #22262f;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333a47;
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(21, 24, 34, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #e7e8ec 20%, #a5b1ff 60%, #8b6cf0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .section-pad {
+    @apply py-24 md:py-32;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
