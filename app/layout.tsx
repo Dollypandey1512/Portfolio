@@ -25,7 +25,7 @@ const mono = JetBrains_Mono({
 });
 
 const siteUrl = "https://portfolio-dolly-pandey.vercel.app";
-const ogImageUrl = `${siteUrl}/og-image.png`;
+const ogImageUrl = `${siteUrl}/og-preview.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: "Dolly Pandey Data Analyst Portfolio Preview",
+        alt: "Dolly Pandey Data Analyst Portfolio",
       },
     ],
     locale: "en_US",
