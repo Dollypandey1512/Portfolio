@@ -84,7 +84,7 @@ export default function Contact() {
                 <Mail size={15} /> Send message
               </button>
               <p className="text-[11px] text-ink-dim/70 font-mono">
-                Opens your email client — no backend wired up yet.
+                Opens your default email app to send directly.
               </p>
             </form>
           </Reveal>

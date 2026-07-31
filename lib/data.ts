@@ -169,26 +169,31 @@ export const certifications = [
     title: "Executive PG Programme in Data Science",
     org: "IIIT Bangalore",
     meta: "Nov 2024 – Nov 2025 · GPA 3.8/4.0",
+    url: "https://www.iiitb.ac.in/",
   },
   {
     title: "Data Science Programming Bootcamp",
     org: "upGrad — Python, Pandas, SQL",
     meta: null,
+    url: "https://www.upgrad.com/",
   },
   {
     title: "Intro to Machine Learning",
     org: "Kaggle",
     meta: null,
+    url: "https://www.kaggle.com/dolly1512",
   },
   {
     title: "Tata GenAI Data Analytics Simulation",
     org: "Forage",
     meta: null,
+    url: "https://www.theforage.com/",
   },
   {
     title: "Microsoft Azure Fundamentals",
     org: "Microsoft Learn — Cloud Concepts",
     meta: "May 2025",
+    url: "https://learn.microsoft.com/",
   },
 ];
 
