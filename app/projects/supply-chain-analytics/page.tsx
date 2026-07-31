@@ -100,6 +100,7 @@ export default function SupplyChainAnalyticsCaseStudy() {
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm font-mono text-ink-dim hover:text-accent-soft transition-colors"
+            style={{ color: "#e5e7eb" }}
           >
             <ArrowLeft size={16} /> Back to Portfolio
           </Link>
@@ -111,7 +112,8 @@ export default function SupplyChainAnalyticsCaseStudy() {
               href="https://github.com/Dollypandey1512/Supply-Chain-Analytics"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-1.5 rounded-full bg-ink text-base hover:bg-accent-soft transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-1.5 rounded-full bg-ink text-base hover:bg-accent-soft transition-colors font-bold"
+              style={{ color: "#08090c" }}
             >
               <Github size={14} /> GitHub Repo
             </a>
@@ -126,86 +128,86 @@ export default function SupplyChainAnalyticsCaseStudy() {
             <Sparkles size={14} /> ⭐ Featured Capstone Project
           </div>
 
-          <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight max-w-4xl">
+          <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight leading-tight max-w-4xl" style={{ color: "#ffffff" }}>
             Supply Chain Analytics – Open-Pit Mining Equipment
           </h1>
 
           <div className="space-y-1">
-            <p className="font-mono text-base md:text-lg text-accent-soft font-semibold">
+            <p className="font-mono text-base md:text-lg font-semibold" style={{ color: "#bcc6ff" }}>
               IIIT Bangalore | Executive PG Programme in Data Science & AI
             </p>
-            <p className="font-mono text-xs text-amber-300">
+            <p className="font-mono text-xs font-semibold" style={{ color: "#fef08a" }}>
               Final Team Capstone Project (Team Members: Anshul Mishra, Dolly Pandey, Ankita Singh)
             </p>
           </div>
 
-          <p className="text-slate-200 text-base md:text-lg max-w-3xl leading-relaxed">
+          <p className="text-base md:text-lg max-w-3xl leading-relaxed font-medium" style={{ color: "#ffffff" }}>
             An end-to-end Supply Chain Analytics project analyzing the operational performance of open-pit mining equipment using SQL and Power BI to identify inefficiencies in production, equipment utilization, trips, and payload capacity.
           </p>
 
           {/* Quick Meta Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-left">
-            <div className="glass rounded-xl p-4 border border-line/60 bg-surface-2/60">
-              <span className="font-mono text-xs text-ink-dim uppercase block mb-1">Institution</span>
-              <span className="font-display font-semibold text-sm text-white">IIIT Bangalore</span>
+            <div className="glass rounded-xl p-4 border border-line/60 bg-surface-2/90">
+              <span className="font-mono text-xs uppercase block mb-1" style={{ color: "#9ca3af" }}>Institution</span>
+              <span className="font-display font-semibold text-sm" style={{ color: "#ffffff" }}>IIIT Bangalore</span>
             </div>
-            <div className="glass rounded-xl p-4 border border-line/60 bg-surface-2/60">
-              <span className="font-mono text-xs text-ink-dim uppercase block mb-1">Domain</span>
-              <span className="font-display font-semibold text-sm text-white">Supply Chain & Mining</span>
+            <div className="glass rounded-xl p-4 border border-line/60 bg-surface-2/90">
+              <span className="font-mono text-xs uppercase block mb-1" style={{ color: "#9ca3af" }}>Domain</span>
+              <span className="font-display font-semibold text-sm" style={{ color: "#ffffff" }}>Supply Chain & Mining</span>
             </div>
-            <div className="glass rounded-xl p-4 border border-line/60 bg-surface-2/60">
-              <span className="font-mono text-xs text-ink-dim uppercase block mb-1">Project Type</span>
-              <span className="font-display font-semibold text-sm text-white">Final Team Capstone</span>
+            <div className="glass rounded-xl p-4 border border-line/60 bg-surface-2/90">
+              <span className="font-mono text-xs uppercase block mb-1" style={{ color: "#9ca3af" }}>Project Type</span>
+              <span className="font-display font-semibold text-sm" style={{ color: "#ffffff" }}>Final Team Capstone</span>
             </div>
-            <div className="glass rounded-xl p-4 border border-line/60 bg-surface-2/60">
-              <span className="font-mono text-xs text-ink-dim uppercase block mb-1">Core Tools</span>
-              <span className="font-display font-semibold text-sm text-accent-soft">Power BI • MySQL • SQL</span>
+            <div className="glass rounded-xl p-4 border border-line/60 bg-surface-2/90">
+              <span className="font-mono text-xs uppercase block mb-1" style={{ color: "#9ca3af" }}>Core Tools</span>
+              <span className="font-display font-semibold text-sm" style={{ color: "#bcc6ff" }}>Power BI • MySQL • SQL</span>
             </div>
           </div>
         </section>
 
         {/* 2. BUSINESS PROBLEM */}
-        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-6 bg-surface-2/80">
+        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-6 bg-surface-2/95">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-lg bg-accent/20 flex items-center justify-center text-accent-soft">
               <Target size={20} />
             </div>
             <div>
-              <span className="font-mono text-xs text-accent-soft uppercase tracking-wider block font-semibold">Business Problem</span>
-              <h2 className="font-display text-2xl font-bold text-white">Open-Pit Mining Equipment Utilization</h2>
+              <span className="font-mono text-xs uppercase tracking-wider block font-semibold" style={{ color: "#bcc6ff" }}>Business Problem</span>
+              <h2 className="font-display text-2xl font-bold" style={{ color: "#ffffff" }}>Open-Pit Mining Equipment Utilization</h2>
             </div>
           </div>
 
-          <div className="space-y-4 text-slate-100 text-sm md:text-base leading-relaxed">
-            <p>
+          <div className="space-y-4 text-sm md:text-base leading-relaxed">
+            <p style={{ color: "#ffffff" }}>
               Open-pit mining operations depend heavily on efficient equipment utilization to maximize production while minimizing operational costs.
             </p>
-            <p className="font-semibold text-white">
+            <p className="font-semibold" style={{ color: "#ffffff" }}>
               Underperforming equipment leads to:
             </p>
             <div className="grid sm:grid-cols-3 gap-4 pt-2">
               <div className="glass p-4 rounded-xl border border-red-500/30 bg-red-500/10 space-y-1">
                 <ShieldAlert size={20} className="text-red-400" />
-                <h3 className="font-display font-semibold text-sm text-white">Higher Cost per Ton</h3>
-                <p className="text-xs text-slate-100">Increased operating and maintenance expenses without proportional tonnage output.</p>
+                <h3 className="font-display font-semibold text-sm" style={{ color: "#ffffff" }}>Higher Cost per Ton</h3>
+                <p className="text-xs" style={{ color: "#ffffff" }}>Increased operating and maintenance expenses without proportional tonnage output.</p>
               </div>
               <div className="glass p-4 rounded-xl border border-amber-500/30 bg-amber-500/10 space-y-1">
                 <TrendingDown size={20} className="text-amber-400" />
-                <h3 className="font-display font-semibold text-sm text-white">Lower Production Efficiency</h3>
-                <p className="text-xs text-slate-100">Bottlenecks and uneven utilization reducing overall mine haulage throughput.</p>
+                <h3 className="font-display font-semibold text-sm" style={{ color: "#ffffff" }}>Lower Production Efficiency</h3>
+                <p className="text-xs" style={{ color: "#ffffff" }}>Bottlenecks and uneven utilization reducing overall mine haulage throughput.</p>
               </div>
               <div className="glass p-4 rounded-xl border border-purple-500/30 bg-purple-500/10 space-y-1">
                 <Wrench size={20} className="text-purple-400" />
-                <h3 className="font-display font-semibold text-sm text-white">Increased Maintenance Overhead</h3>
-                <p className="text-xs text-slate-100">Active usage of low-performing equipment driving up wear and repair costs.</p>
+                <h3 className="font-display font-semibold text-sm" style={{ color: "#ffffff" }}>Increased Maintenance Overhead</h3>
+                <p className="text-xs" style={{ color: "#ffffff" }}>Active usage of low-performing equipment driving up wear and repair costs.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* 3. OBJECTIVE */}
-        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/80">
-          <h2 className="font-display text-2xl font-bold text-white flex items-center gap-2">
+        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/95">
+          <h2 className="font-display text-2xl font-bold flex items-center gap-2" style={{ color: "#ffffff" }}>
             <CheckCircle2 size={22} className="text-accent-soft" /> Project Objectives
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
@@ -216,10 +218,10 @@ export default function SupplyChainAnalyticsCaseStudy() {
               { title: "Analyze Trips vs. Production", desc: "Study the relationship between trip count and actual tonnage production." },
               { title: "Recommend Operational Improvements", desc: "Generate actionable recommendations for dispatch, maintenance, and asset management." },
             ].map((obj, i) => (
-              <div key={i} className="glass p-4 rounded-xl border border-line space-y-1 bg-surface/80">
-                <span className="font-mono text-xs text-accent-soft font-bold block">Objective {i + 1}</span>
-                <h3 className="font-display font-semibold text-sm text-white">{obj.title}</h3>
-                <p className="text-xs text-slate-100 leading-relaxed">{obj.desc}</p>
+              <div key={i} className="glass p-4 rounded-xl border border-line space-y-1 bg-surface/90">
+                <span className="font-mono text-xs font-bold block" style={{ color: "#38bdf8" }}>Objective {i + 1}</span>
+                <h3 className="font-display font-semibold text-sm" style={{ color: "#ffffff" }}>{obj.title}</h3>
+                <p className="text-xs leading-relaxed" style={{ color: "#ffffff" }}>{obj.desc}</p>
               </div>
             ))}
           </div>
@@ -227,32 +229,32 @@ export default function SupplyChainAnalyticsCaseStudy() {
 
         {/* 4. DATASET & TOOLS */}
         <section className="grid md:grid-cols-2 gap-8">
-          <div className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/80">
-            <h2 className="font-display text-xl font-bold text-white flex items-center gap-2">
+          <div className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/95">
+            <h2 className="font-display text-xl font-bold flex items-center gap-2" style={{ color: "#ffffff" }}>
               <Database size={20} className="text-accent-soft" /> Dataset & Metrics Analyzed
             </h2>
             <div className="grid grid-cols-2 gap-3 text-xs font-mono">
-              <div className="glass p-3 rounded-lg border border-line bg-surface/80">
-                <span className="text-accent-soft font-semibold block">Equipment-wise Production</span>
-                <span className="text-slate-100">Tonnage output per machine</span>
+              <div className="glass p-3 rounded-lg border border-line bg-surface/90">
+                <span className="font-semibold block" style={{ color: "#38bdf8" }}>Equipment-wise Production</span>
+                <span style={{ color: "#ffffff" }}>Tonnage output per machine</span>
               </div>
-              <div className="glass p-3 rounded-lg border border-line bg-surface/80">
-                <span className="text-accent-soft font-semibold block">Trips per Day</span>
-                <span className="text-slate-100">Completed haul trip frequency</span>
+              <div className="glass p-3 rounded-lg border border-line bg-surface/90">
+                <span className="font-semibold block" style={{ color: "#38bdf8" }}>Trips per Day</span>
+                <span style={{ color: "#ffffff" }}>Completed haul trip frequency</span>
               </div>
-              <div className="glass p-3 rounded-lg border border-line bg-surface/80">
-                <span className="text-accent-soft font-semibold block">Payload Utilization %</span>
-                <span className="text-slate-100">Loading capacity ratio</span>
+              <div className="glass p-3 rounded-lg border border-line bg-surface/90">
+                <span className="font-semibold block" style={{ color: "#38bdf8" }}>Payload Utilization %</span>
+                <span style={{ color: "#ffffff" }}>Loading capacity ratio</span>
               </div>
-              <div className="glass p-3 rounded-lg border border-line bg-surface/80">
-                <span className="text-accent-soft font-semibold block">Maintenance Status</span>
-                <span className="text-slate-100">Active vs maintenance counts</span>
+              <div className="glass p-3 rounded-lg border border-line bg-surface/90">
+                <span className="font-semibold block" style={{ color: "#38bdf8" }}>Maintenance Status</span>
+                <span style={{ color: "#ffffff" }}>Active vs maintenance counts</span>
               </div>
             </div>
           </div>
 
-          <div className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/80">
-            <h2 className="font-display text-xl font-bold text-white flex items-center gap-2">
+          <div className="glass rounded-xl2 p-8 border border-line/60 space-y-5 bg-surface-2/95">
+            <h2 className="font-display text-xl font-bold flex items-center gap-2" style={{ color: "#ffffff" }}>
               <Wrench size={20} className="text-accent-soft" /> Tools Used
             </h2>
             <div className="flex flex-wrap gap-3 pt-2">
@@ -276,17 +278,17 @@ export default function SupplyChainAnalyticsCaseStudy() {
         </section>
 
         {/* 5. TEAM & MY CONTRIBUTION */}
-        <section className="glass rounded-xl2 p-8 border-l-4 border-accent bg-surface-2/90 space-y-4">
+        <section className="glass rounded-xl2 p-8 border-l-4 border-accent bg-surface-2/95 space-y-4">
           <div className="flex items-center gap-3">
             <Users size={22} className="text-accent-soft" />
-            <h2 className="font-display text-2xl font-bold text-white">Team Capstone Project & My Contribution</h2>
+            <h2 className="font-display text-2xl font-bold" style={{ color: "#ffffff" }}>Team Capstone Project & My Contribution</h2>
           </div>
-          <p className="text-sm md:text-base text-slate-100 font-medium leading-relaxed">
-            This was the final team capstone project completed during the <strong className="text-white">Executive PG Programme in Data Science & AI at IIIT Bangalore</strong>.
+          <p className="text-sm md:text-base font-medium leading-relaxed" style={{ color: "#ffffff" }}>
+            This was the final team capstone project completed during the <strong style={{ color: "#fef08a" }}>Executive PG Programme in Data Science & AI at IIIT Bangalore</strong>.
           </p>
           <div className="glass p-5 rounded-xl border border-accent/60 bg-surface/90">
-            <span className="font-mono text-xs text-sky-300 font-bold uppercase tracking-wider block mb-1">My Specific Contributions</span>
-            <p className="text-sm md:text-base text-white font-mono font-medium leading-relaxed">
+            <span className="font-mono text-xs font-bold uppercase tracking-wider block mb-1" style={{ color: "#38bdf8" }}>My Specific Contributions</span>
+            <p className="text-sm md:text-base font-mono font-semibold leading-relaxed" style={{ color: "#ffffff" }}>
               &quot;My contributions included SQL-based data preparation, Power BI dashboard development, data analysis, business insight generation, visualization, and presentation support.&quot;
             </p>
           </div>
@@ -295,49 +297,49 @@ export default function SupplyChainAnalyticsCaseStudy() {
         {/* 6. KPI CARDS */}
         <section className="space-y-6">
           <div className="text-center md:text-left">
-            <span className="font-mono text-xs text-accent-soft uppercase tracking-wider font-semibold block">Metrics Overview</span>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white">Key Performance Indicators Tracked</h2>
+            <span className="font-mono text-xs uppercase tracking-wider font-bold block" style={{ color: "#bcc6ff" }}>Metrics Overview</span>
+            <h2 className="font-display text-2xl md:text-3xl font-bold" style={{ color: "#ffffff" }}>Key Performance Indicators Tracked</h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <div className="glass rounded-xl p-6 border border-line text-center bg-surface-2/60">
+            <div className="glass rounded-xl p-6 border border-line text-center bg-surface-2/90">
               <Truck size={24} className="text-accent-soft mx-auto mb-2" />
-              <div className="font-display text-xl md:text-2xl font-bold text-white">Total Production</div>
-              <div className="font-mono text-xs text-slate-300 mt-1">Tonnage Output</div>
+              <div className="font-display text-xl md:text-2xl font-bold" style={{ color: "#ffffff" }}>Total Production</div>
+              <div className="font-mono text-xs mt-1" style={{ color: "#e5e7eb" }}>Tonnage Output</div>
             </div>
 
-            <div className="glass rounded-xl p-6 border border-line text-center bg-surface-2/60">
+            <div className="glass rounded-xl p-6 border border-line text-center bg-surface-2/90">
               <Layers size={24} className="text-emerald-400 mx-auto mb-2" />
-              <div className="font-display text-xl md:text-2xl font-bold text-white">Total Trips</div>
-              <div className="font-mono text-xs text-slate-300 mt-1">Haul Trip Count</div>
+              <div className="font-display text-xl md:text-2xl font-bold" style={{ color: "#ffffff" }}>Total Trips</div>
+              <div className="font-mono text-xs mt-1" style={{ color: "#e5e7eb" }}>Haul Trip Count</div>
             </div>
 
-            <div className="glass rounded-xl p-6 border border-line text-center bg-surface-2/60">
+            <div className="glass rounded-xl p-6 border border-line text-center bg-surface-2/90">
               <TrendingUp size={24} className="text-sky-400 mx-auto mb-2" />
-              <div className="font-display text-xl md:text-2xl font-bold text-white">Production / Day</div>
-              <div className="font-mono text-xs text-slate-300 mt-1">Daily Tonnage Rate</div>
+              <div className="font-display text-xl md:text-2xl font-bold" style={{ color: "#ffffff" }}>Production / Day</div>
+              <div className="font-mono text-xs mt-1" style={{ color: "#e5e7eb" }}>Daily Tonnage Rate</div>
             </div>
 
-            <div className="glass rounded-xl p-6 border border-line text-center bg-surface-2/60">
+            <div className="glass rounded-xl p-6 border border-line text-center bg-surface-2/90">
               <LineChart size={24} className="text-purple-400 mx-auto mb-2" />
-              <div className="font-display text-xl md:text-2xl font-bold text-white">Trips / Day</div>
-              <div className="font-mono text-xs text-slate-300 mt-1">Daily Trip Rate</div>
+              <div className="font-display text-xl md:text-2xl font-bold" style={{ color: "#ffffff" }}>Trips / Day</div>
+              <div className="font-mono text-xs mt-1" style={{ color: "#e5e7eb" }}>Daily Trip Rate</div>
             </div>
 
-            <div className="glass rounded-xl p-6 border border-line text-center col-span-2 md:col-span-1 bg-surface-2/60">
+            <div className="glass rounded-xl p-6 border border-line text-center col-span-2 md:col-span-1 bg-surface-2/90">
               <PieChart size={24} className="text-amber-400 mx-auto mb-2" />
-              <div className="font-display text-xl md:text-2xl font-bold text-accent-soft">Payload Utilization %</div>
-              <div className="font-mono text-xs text-slate-300 mt-1">Loading Ratio</div>
+              <div className="font-display text-xl md:text-2xl font-bold" style={{ color: "#bcc6ff" }}>Payload Utilization %</div>
+              <div className="font-mono text-xs mt-1" style={{ color: "#e5e7eb" }}>Loading Ratio</div>
             </div>
           </div>
         </section>
 
         {/* 7. AUTHENTIC POWER BI DASHBOARD GALLERY */}
-        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-6 bg-surface-2/60">
+        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-6 bg-surface-2/95">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span className="font-mono text-xs text-accent-soft uppercase tracking-wider font-semibold block">Dashboard Showcase</span>
-              <h2 className="font-display text-2xl font-bold text-white">Power BI Dashboard Gallery</h2>
+              <span className="font-mono text-xs uppercase tracking-wider font-semibold block" style={{ color: "#bcc6ff" }}>Dashboard Showcase</span>
+              <h2 className="font-display text-2xl font-bold" style={{ color: "#ffffff" }}>Power BI Dashboard Gallery</h2>
             </div>
 
             {/* Gallery Tab Switcher */}
@@ -346,10 +348,10 @@ export default function SupplyChainAnalyticsCaseStudy() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`font-mono text-xs px-3.5 py-1.5 rounded-lg transition-colors font-medium ${
+                  className={`font-mono text-xs px-3.5 py-1.5 rounded-lg transition-colors font-semibold ${
                     activeTab === tab.id
                       ? "bg-accent text-slate-950 font-bold"
-                      : "glass text-slate-200 hover:text-white"
+                      : "glass text-white hover:bg-surface-2"
                   }`}
                 >
                   {tab.label}
@@ -359,17 +361,18 @@ export default function SupplyChainAnalyticsCaseStudy() {
           </div>
 
           {/* Interactive High-Res Screenshot Showcase */}
-          <div className="relative glass rounded-2xl p-6 border border-line space-y-4 bg-surface/80">
+          <div className="relative glass rounded-2xl p-6 border border-line space-y-4 bg-surface/90">
             <div className="flex items-center justify-between border-b border-line pb-4">
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-red-500" />
                 <span className="h-3 w-3 rounded-full bg-yellow-500" />
                 <span className="h-3 w-3 rounded-full bg-green-500" />
-                <span className="font-mono text-xs text-slate-300 ml-2 font-semibold">{currentTabItem.title}</span>
+                <span className="font-mono text-xs ml-2 font-semibold" style={{ color: "#ffffff" }}>{currentTabItem.title}</span>
               </div>
               <button
                 onClick={() => openLightbox(currentTabItem.img, currentTabItem.title)}
-                className="inline-flex items-center gap-1.5 text-xs font-mono text-accent-soft hover:underline font-medium"
+                className="inline-flex items-center gap-1.5 text-xs font-mono hover:underline font-bold"
+                style={{ color: "#bcc6ff" }}
               >
                 <Maximize2 size={14} /> Expand Full Screen
               </button>
@@ -392,49 +395,49 @@ export default function SupplyChainAnalyticsCaseStudy() {
               </div>
             </div>
 
-            <p className="text-xs md:text-sm text-slate-300 font-mono leading-relaxed">
+            <p className="text-xs md:text-sm font-mono leading-relaxed font-medium" style={{ color: "#ffffff" }}>
               {currentTabItem.desc}
             </p>
           </div>
         </section>
 
         {/* 8. KEY INSIGHTS */}
-        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-6 bg-surface-2/60">
+        <section className="glass rounded-xl2 p-8 border border-line/60 space-y-6 bg-surface-2/95">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-lg bg-accent/20 flex items-center justify-center text-accent-soft">
               <Lightbulb size={20} />
             </div>
             <div>
-              <span className="font-mono text-xs text-accent-soft uppercase tracking-wider font-semibold block">Analytical Findings</span>
-              <h2 className="font-display text-2xl font-bold text-white">Key Insights</h2>
+              <span className="font-mono text-xs uppercase tracking-wider font-bold block" style={{ color: "#bcc6ff" }}>Analytical Findings</span>
+              <h2 className="font-display text-2xl font-bold" style={{ color: "#ffffff" }}>Key Insights</h2>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="glass rounded-xl p-6 border border-line/60 space-y-2 bg-surface/50">
-              <span className="font-mono text-xs text-accent-soft font-semibold block">01 — Production Concentration</span>
-              <p className="text-sm md:text-base text-slate-100 leading-relaxed font-medium">
+            <div className="glass rounded-xl p-6 border border-line/60 space-y-2 bg-surface/90">
+              <span className="font-mono text-xs font-bold block" style={{ color: "#38bdf8" }}>01 — Production Concentration</span>
+              <p className="text-sm md:text-base leading-relaxed font-medium" style={{ color: "#ffffff" }}>
                 Production is concentrated among a small number of high-performing equipment (e.g. EX8044, EX8047, EX8051).
               </p>
             </div>
 
-            <div className="glass rounded-xl p-6 border border-line/60 space-y-2 bg-surface/50">
-              <span className="font-mono text-xs text-accent-soft font-semibold block">02 — Trip Count Evaluation</span>
-              <p className="text-sm md:text-base text-slate-100 leading-relaxed font-medium">
+            <div className="glass rounded-xl p-6 border border-line/60 space-y-2 bg-surface/90">
+              <span className="font-mono text-xs font-bold block" style={{ color: "#38bdf8" }}>02 — Trip Count Evaluation</span>
+              <p className="text-sm md:text-base leading-relaxed font-medium" style={{ color: "#ffffff" }}>
                 Trip count alone is not a reliable performance indicator. Production does not increase linearly with trips due to payload variations.
               </p>
             </div>
 
-            <div className="glass rounded-xl p-6 border border-line/60 space-y-2 bg-surface/50">
-              <span className="font-mono text-xs text-accent-soft font-semibold block">03 — Payload Efficiency</span>
-              <p className="text-sm md:text-base text-slate-100 leading-relaxed font-medium">
+            <div className="glass rounded-xl p-6 border border-line/60 space-y-2 bg-surface/90">
+              <span className="font-mono text-xs font-bold block" style={{ color: "#38bdf8" }}>03 — Payload Efficiency</span>
+              <p className="text-sm md:text-base leading-relaxed font-medium" style={{ color: "#ffffff" }}>
                 Payload utilization is one of the strongest indicators of operational efficiency across haulage equipment.
               </p>
             </div>
 
-            <div className="glass rounded-xl p-6 border border-line/60 space-y-2 bg-surface/50">
-              <span className="font-mono text-xs text-accent-soft font-semibold block">04 — Operational Cost Impact</span>
-              <p className="text-sm md:text-base text-slate-100 leading-relaxed font-medium">
+            <div className="glass rounded-xl p-6 border border-line/60 space-y-2 bg-surface/90">
+              <span className="font-mono text-xs font-bold block" style={{ color: "#38bdf8" }}>04 — Operational Cost Impact</span>
+              <p className="text-sm md:text-base leading-relaxed font-medium" style={{ color: "#ffffff" }}>
                 Low-performing equipment increase operational cost without contributing proportional production output.
               </p>
             </div>
@@ -444,47 +447,47 @@ export default function SupplyChainAnalyticsCaseStudy() {
         {/* 9. RECOMMENDATIONS */}
         <section className="space-y-6">
           <div className="text-center md:text-left">
-            <span className="font-mono text-xs text-accent-soft uppercase tracking-wider font-semibold block">Project Recommendations</span>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white">Actionable Recommendations</h2>
+            <span className="font-mono text-xs uppercase tracking-wider font-bold block" style={{ color: "#bcc6ff" }}>Project Recommendations</span>
+            <h2 className="font-display text-2xl md:text-3xl font-bold" style={{ color: "#ffffff" }}>Actionable Recommendations</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="glass rounded-xl2 p-6 border border-line/60 space-y-3 bg-surface-2/60">
+            <div className="glass rounded-xl2 p-6 border border-line/60 space-y-3 bg-surface-2/95">
               <div className="h-10 w-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
                 <Truck size={20} />
               </div>
-              <h3 className="font-display font-bold text-base text-white">Payload Optimization</h3>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <h3 className="font-display font-bold text-base" style={{ color: "#ffffff" }}>Payload Optimization</h3>
+              <p className="text-xs leading-relaxed font-normal" style={{ color: "#ffffff" }}>
                 Standardize loading practices across equipment to ensure optimal haul payload capacity.
               </p>
             </div>
 
-            <div className="glass rounded-xl2 p-6 border border-line/60 space-y-3 bg-surface-2/60">
+            <div className="glass rounded-xl2 p-6 border border-line/60 space-y-3 bg-surface-2/95">
               <div className="h-10 w-10 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400">
                 <LineChart size={20} />
               </div>
-              <h3 className="font-display font-bold text-base text-white">Trip Optimization</h3>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <h3 className="font-display font-bold text-base" style={{ color: "#ffffff" }}>Trip Optimization</h3>
+              <p className="text-xs leading-relaxed font-normal" style={{ color: "#ffffff" }}>
                 Reduce high-trip / low-output equipment usage to improve overall fleet dispatch efficiency.
               </p>
             </div>
 
-            <div className="glass rounded-xl2 p-6 border border-line/60 space-y-3 bg-surface-2/60">
+            <div className="glass rounded-xl2 p-6 border border-line/60 space-y-3 bg-surface-2/95">
               <div className="h-10 w-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
                 <Wrench size={20} />
               </div>
-              <h3 className="font-display font-bold text-base text-white">Maintenance Prioritization</h3>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <h3 className="font-display font-bold text-base" style={{ color: "#ffffff" }}>Maintenance Prioritization</h3>
+              <p className="text-xs leading-relaxed font-normal" style={{ color: "#ffffff" }}>
                 Focus maintenance on medium performers with high potential to protect core tonnage capacity.
               </p>
             </div>
 
-            <div className="glass rounded-xl2 p-6 border border-line/60 space-y-3 bg-surface-2/60">
+            <div className="glass rounded-xl2 p-6 border border-line/60 space-y-3 bg-surface-2/95">
               <div className="h-10 w-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400">
                 <Layers size={20} />
               </div>
-              <h3 className="font-display font-bold text-base text-white">Asset Rationalization</h3>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <h3 className="font-display font-bold text-base" style={{ color: "#ffffff" }}>Asset Rationalization</h3>
+              <p className="text-xs leading-relaxed font-normal" style={{ color: "#ffffff" }}>
                 Review low-performing equipment for operational route redeployment or decommissioning.
               </p>
             </div>
@@ -492,8 +495,8 @@ export default function SupplyChainAnalyticsCaseStudy() {
         </section>
 
         {/* 10. PROJECT LINKS & DELIVERABLES */}
-        <section className="glass rounded-xl2 p-8 border border-line/60 text-center space-y-6 bg-surface-2/70">
-          <h2 className="font-display text-2xl font-bold text-white">Project Deliverables & Repository Links</h2>
+        <section className="glass rounded-xl2 p-8 border border-line/60 text-center space-y-6 bg-surface-2/95">
+          <h2 className="font-display text-2xl font-bold" style={{ color: "#ffffff" }}>Project Deliverables & Repository Links</h2>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <a
               href="https://github.com/Dollypandey1512/Supply-Chain-Analytics"
@@ -507,7 +510,8 @@ export default function SupplyChainAnalyticsCaseStudy() {
               href="https://github.com/Dollypandey1512/Supply-Chain-Analytics/blob/main/capestone_ppt.pptx"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass font-bold text-sm text-white hover:bg-surface-2 transition-all border border-line"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass font-bold text-sm hover:bg-surface-2 transition-all border border-line"
+              style={{ color: "#ffffff" }}
             >
               <FileText size={16} /> Presentation Deck
             </a>
@@ -515,7 +519,8 @@ export default function SupplyChainAnalyticsCaseStudy() {
               href="https://drive.google.com/file/d/1YF0urw14xzN1HDYaNsUF_b0oTeD0MYkp/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass font-bold text-sm text-accent-soft hover:bg-surface-2 transition-all border border-accent/40"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full glass font-bold text-sm hover:bg-surface-2 transition-all border border-accent/40"
+              style={{ color: "#bcc6ff" }}
             >
               <Play size={16} /> Demo Video Walkthrough
             </a>
@@ -526,7 +531,8 @@ export default function SupplyChainAnalyticsCaseStudy() {
         <div className="pt-8 text-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm font-mono text-accent-soft hover:underline font-semibold"
+            className="inline-flex items-center gap-2 text-sm font-mono hover:underline font-semibold"
+            style={{ color: "#bcc6ff" }}
           >
             <ArrowLeft size={16} /> Return to Portfolio Home
           </Link>
@@ -548,7 +554,7 @@ export default function SupplyChainAnalyticsCaseStudy() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between border-b border-line pb-3">
-                <h3 className="font-display font-bold text-lg text-white">{lightboxTitle}</h3>
+                <h3 className="font-display font-bold text-lg" style={{ color: "#ffffff" }}>{lightboxTitle}</h3>
                 <button
                   onClick={() => setLightboxOpen(false)}
                   className="text-slate-300 hover:text-white transition-colors"

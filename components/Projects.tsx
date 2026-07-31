@@ -38,10 +38,10 @@ export default function Projects() {
           <p className="font-mono text-sm text-accent-soft font-semibold mb-3">
             04 — Featured Projects & Capstone
           </p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white mb-4 max-w-2xl">
+          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white mb-4 max-w-2xl" style={{ color: "#ffffff" }}>
             Data Analytics Projects & Case Studies
           </h2>
-          <p className="text-slate-100 text-base md:text-lg max-w-2xl mb-12">
+          <p className="text-base md:text-lg max-w-2xl mb-12" style={{ color: "#f3f4f6" }}>
             Structured analytical projects solving real-world business problems using Python, SQL, Tableau, Power BI, and Machine Learning.
           </p>
         </Reveal>
@@ -61,17 +61,17 @@ export default function Projects() {
                   <Award size={13} /> IIIT Bangalore Capstone Project
                 </span>
               </div>
-              <span className="font-mono text-xs text-slate-200 font-medium">
+              <span className="font-mono text-xs font-medium" style={{ color: "#f3f4f6" }}>
                 Executive PG in Data Science & AI
               </span>
             </div>
 
             {/* Title & Tagline */}
             <div className="space-y-3">
-              <h3 className="font-display text-2xl md:text-4xl font-bold text-white leading-tight">
+              <h3 className="font-display text-2xl md:text-4xl font-bold leading-tight" style={{ color: "#ffffff" }}>
                 {flagshipProject.title}
               </h3>
-              <p className="text-amber-200 font-mono text-base md:text-lg font-semibold leading-relaxed">
+              <p className="font-mono text-base md:text-lg font-semibold leading-relaxed" style={{ color: "#fef08a" }}>
                 {flagshipProject.tagline}
               </p>
             </div>
@@ -79,19 +79,19 @@ export default function Projects() {
             {/* Summary Objective & Impact */}
             <div className="grid md:grid-cols-2 gap-6 pt-5 border-t border-line">
               <div className="space-y-2 bg-surface/90 p-5 rounded-xl border border-line">
-                <span className="font-mono text-xs text-sky-300 font-bold uppercase tracking-wider block">
+                <span className="font-mono text-xs font-bold uppercase tracking-wider block" style={{ color: "#38bdf8" }}>
                   🎯 Business Objective
                 </span>
-                <p className="text-white text-sm md:text-base leading-relaxed font-normal">
+                <p className="text-sm md:text-base leading-relaxed font-medium" style={{ color: "#ffffff" }}>
                   {flagshipProject.businessObjective}
                 </p>
               </div>
 
               <div className="space-y-2 bg-surface/90 p-5 rounded-xl border border-line">
-                <span className="font-mono text-xs text-amber-300 font-bold uppercase tracking-wider block">
+                <span className="font-mono text-xs font-bold uppercase tracking-wider block" style={{ color: "#fbbf24" }}>
                   ⚡ Key Business Impact
                 </span>
-                <p className="text-white text-sm md:text-base leading-relaxed font-normal">
+                <p className="text-sm md:text-base leading-relaxed font-medium" style={{ color: "#ffffff" }}>
                   {flagshipProject.businessImpact}
                 </p>
               </div>
@@ -103,7 +103,8 @@ export default function Projects() {
                 {flagshipProject.toolsUsed.map((tool) => (
                   <span
                     key={tool}
-                    className="text-xs font-mono px-3.5 py-1.5 rounded-lg bg-surface border border-line text-white font-bold"
+                    className="text-xs font-mono px-3.5 py-1.5 rounded-lg bg-surface border border-line font-bold"
+                    style={{ color: "#ffffff" }}
                   >
                     {tool}
                   </span>
@@ -116,12 +117,13 @@ export default function Projects() {
                     href={flagshipProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-3 rounded-full bg-surface border border-line text-white font-bold hover:border-accent transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-3 rounded-full bg-surface border border-line font-bold hover:border-accent transition-colors"
+                    style={{ color: "#ffffff" }}
                   >
                     <Github size={15} /> GitHub Repo
                   </a>
                 ) : (
-                  <span className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-3 rounded-full bg-surface border border-line text-slate-200 font-medium opacity-80">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-3 rounded-full bg-surface border border-line font-medium opacity-80" style={{ color: "#e5e7eb" }}>
                     <Github size={15} /> Repo not public yet
                   </span>
                 )}
@@ -140,7 +142,7 @@ export default function Projects() {
         {/* 2. OTHER ANALYTICAL PROJECTS */}
         <div className="space-y-8">
           <Reveal>
-            <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-6">
+            <h3 className="font-display text-xl md:text-2xl font-bold mb-6" style={{ color: "#ffffff" }}>
               Additional Analytics Case Studies & Projects
             </h3>
           </Reveal>
@@ -155,7 +157,7 @@ export default function Projects() {
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="space-y-1.5 flex-1">
                       <div className="flex items-center gap-3 flex-wrap">
-                        <h4 className="font-display text-xl font-bold text-white">
+                        <h4 className="font-display text-xl font-bold" style={{ color: "#ffffff" }}>
                           {project.title}
                         </h4>
                         {project.featured && (
@@ -164,7 +166,7 @@ export default function Projects() {
                           </span>
                         )}
                       </div>
-                      <p className="text-amber-200 font-mono text-xs md:text-sm font-semibold">
+                      <p className="font-mono text-xs md:text-sm font-semibold" style={{ color: "#fef08a" }}>
                         {project.tagline}
                       </p>
                     </div>
@@ -176,12 +178,13 @@ export default function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-surface hover:bg-ink hover:text-slate-950 text-white border border-line transition-colors font-semibold"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-surface hover:bg-ink hover:text-slate-950 border border-line transition-colors font-semibold"
+                          style={{ color: "#ffffff" }}
                         >
                           <Github size={15} /> GitHub Repo
                         </a>
                       ) : (
-                        <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-surface border border-line text-slate-200 font-medium opacity-80">
+                        <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-surface border border-line font-medium opacity-80" style={{ color: "#e5e7eb" }}>
                           <Github size={15} /> Repo not public yet
                         </span>
                       )}
@@ -215,19 +218,19 @@ export default function Projects() {
 
                   {/* Summary Badges & Objective */}
                   <div className="mt-5 pt-5 border-t border-line grid md:grid-cols-2 gap-4 text-sm">
-                    <div className="bg-surface/80 p-4 rounded-xl border border-line/60">
-                      <span className="font-mono text-xs text-sky-300 font-bold uppercase tracking-wider block mb-1">
+                    <div className="bg-surface/90 p-4 rounded-xl border border-line/60">
+                      <span className="font-mono text-xs font-bold uppercase tracking-wider block mb-1" style={{ color: "#38bdf8" }}>
                         🎯 Business Objective
                       </span>
-                      <p className="text-white font-normal leading-relaxed">
+                      <p className="font-medium leading-relaxed" style={{ color: "#ffffff" }}>
                         {project.businessObjective}
                       </p>
                     </div>
-                    <div className="bg-surface/80 p-4 rounded-xl border border-line/60">
-                      <span className="font-mono text-xs text-amber-300 font-bold uppercase tracking-wider block mb-1">
+                    <div className="bg-surface/90 p-4 rounded-xl border border-line/60">
+                      <span className="font-mono text-xs font-bold uppercase tracking-wider block mb-1" style={{ color: "#fbbf24" }}>
                         ⚡ Business Impact & Outcome
                       </span>
-                      <p className="text-white font-normal leading-relaxed">
+                      <p className="font-medium leading-relaxed" style={{ color: "#ffffff" }}>
                         {project.businessImpact}
                       </p>
                     </div>
@@ -238,7 +241,8 @@ export default function Projects() {
                     {project.toolsUsed.map((tool) => (
                       <span
                         key={tool}
-                        className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-surface border border-line text-white font-semibold"
+                        className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-surface border border-line font-semibold"
+                        style={{ color: "#ffffff" }}
                       >
                         {tool}
                       </span>
@@ -257,23 +261,23 @@ export default function Projects() {
                       >
                         <div className="grid md:grid-cols-2 gap-6">
                           {/* Problem & Objective */}
-                          <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/80">
-                            <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
+                          <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/90">
+                            <h5 className="font-display font-semibold text-sm flex items-center gap-2" style={{ color: "#ffffff" }}>
                               <Target size={16} className="text-accent-soft" />
                               Problem Statement
                             </h5>
-                            <p className="text-slate-100 text-xs md:text-sm leading-relaxed">
+                            <p className="text-xs md:text-sm leading-relaxed" style={{ color: "#f3f4f6" }}>
                               {project.problem}
                             </p>
                           </div>
 
                           {/* Dataset & Tools */}
-                          <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/80">
-                            <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
+                          <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/90">
+                            <h5 className="font-display font-semibold text-sm flex items-center gap-2" style={{ color: "#ffffff" }}>
                               <Database size={16} className="text-accent-soft" />
                               Dataset & Data Sources
                             </h5>
-                            <p className="text-slate-100 text-xs md:text-sm leading-relaxed">
+                            <p className="text-xs md:text-sm leading-relaxed" style={{ color: "#f3f4f6" }}>
                               {project.dataset}
                             </p>
                           </div>
@@ -281,31 +285,31 @@ export default function Projects() {
 
                         <div className="grid md:grid-cols-2 gap-6">
                           {/* Approach */}
-                          <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/80">
-                            <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
+                          <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/90">
+                            <h5 className="font-display font-semibold text-sm flex items-center gap-2" style={{ color: "#ffffff" }}>
                               <Wrench size={16} className="text-accent-soft" />
                               Analytical Approach & Execution
                             </h5>
-                            <p className="text-slate-100 text-xs md:text-sm leading-relaxed">
+                            <p className="text-xs md:text-sm leading-relaxed" style={{ color: "#f3f4f6" }}>
                               {project.approach}
                             </p>
                           </div>
 
                           {/* Dashboard */}
-                          <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/80">
-                            <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
+                          <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/90">
+                            <h5 className="font-display font-semibold text-sm flex items-center gap-2" style={{ color: "#ffffff" }}>
                               <LayoutDashboard size={16} className="text-accent-soft" />
                               Dashboard & Reporting Visuals
                             </h5>
-                            <p className="text-slate-100 text-xs md:text-sm leading-relaxed">
+                            <p className="text-xs md:text-sm leading-relaxed" style={{ color: "#f3f4f6" }}>
                               {project.dashboard}
                             </p>
                           </div>
                         </div>
 
                         {/* Key Insights */}
-                        <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/80">
-                          <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
+                        <div className="glass rounded-xl p-5 border border-line space-y-3 bg-surface/90">
+                          <h5 className="font-display font-semibold text-sm flex items-center gap-2" style={{ color: "#ffffff" }}>
                             <TrendingUp size={16} className="text-accent-soft" />
                             Key Analytical Insights
                           </h5>
@@ -313,7 +317,8 @@ export default function Projects() {
                             {project.keyInsights.map((insight, idx) => (
                               <li
                                 key={idx}
-                                className="text-slate-100 text-xs md:text-sm leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-accent-soft font-normal"
+                                className="text-xs md:text-sm leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-accent-soft font-normal"
+                                style={{ color: "#ffffff" }}
                               >
                                 {insight}
                               </li>
@@ -322,12 +327,12 @@ export default function Projects() {
                         </div>
 
                         {/* Learning */}
-                        <div className="glass rounded-xl p-5 border-l-4 border-accent space-y-2 bg-surface/80">
-                          <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
+                        <div className="glass rounded-xl p-5 border-l-4 border-accent space-y-2 bg-surface/90">
+                          <h5 className="font-display font-semibold text-sm flex items-center gap-2" style={{ color: "#ffffff" }}>
                             <Lightbulb size={16} className="text-accent-soft" />
                             Key Learning & Takeaway
                           </h5>
-                          <p className="text-slate-100 text-xs md:text-sm leading-relaxed font-normal">
+                          <p className="text-xs md:text-sm leading-relaxed font-normal" style={{ color: "#f3f4f6" }}>
                             {project.learning}
                           </p>
                         </div>
