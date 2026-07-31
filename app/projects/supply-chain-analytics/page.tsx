@@ -29,7 +29,8 @@ import {
   TrendingUp,
   Truck,
   Users,
-  Wrench,, X
+  Wrench,
+  X
 } from "lucide-react";
 
 export default function SupplyChainAnalyticsCaseStudy() {
