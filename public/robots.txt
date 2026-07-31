@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dollypandey.dev/sitemap.xml
+Sitemap: https://portfolio-dolly-pandey.vercel.app/sitemap.xml

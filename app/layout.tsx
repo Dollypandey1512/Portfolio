@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
   variable: "--font-mono",
 });
 
-const siteUrl = "https://dollypandey.dev";
+const siteUrl = "https://portfolio-dolly-pandey.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

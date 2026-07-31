@@ -16,7 +16,6 @@ import {
   Lightbulb,
   LayoutDashboard,
   ArrowRight,
-  Sparkles,
   Award,
 } from "lucide-react";
 import { projects, Project } from "@/lib/data";
@@ -40,14 +39,14 @@ export default function Projects() {
             04 — Featured Projects & Capstone
           </p>
           <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white mb-4 max-w-2xl">
-            Data Analytics Case Studies & Business Impact
+            Data Analytics Projects & Case Studies
           </h2>
           <p className="text-slate-200 text-base md:text-lg max-w-2xl mb-12">
-            Structured analytical projects solving real-world business problems using SQL, Python, Power BI, Tableau, and Machine Learning.
+            Structured analytical projects solving real-world business problems using Python, SQL, Tableau, Power BI, and Machine Learning.
           </p>
         </Reveal>
 
-        {/* 🌟 1. FLAGSHIP CAPSTONE HERO CARD (HIGH CONTRAST & MAXIMUM VISIBILITY) */}
+        {/* 🌟 1. FLAGSHIP CAPSTONE HERO CARD */}
         <Reveal delay={0.05}>
           <div className="glass rounded-2xl p-8 md:p-10 border-2 border-accent/80 shadow-glow relative overflow-hidden mb-14 space-y-8 bg-surface-2/90">
             <div aria-hidden="true" className="absolute -top-16 -right-16 h-64 w-64 rounded-full bg-accent/20 blur-[80px]" />
@@ -59,11 +58,11 @@ export default function Projects() {
                   <Star size={13} /> ⭐ Featured Capstone Project
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-1.5 rounded-full glass border border-accent/50 text-accent-soft font-medium">
-                  <Award size={13} /> IIIT Bangalore Final Team Capstone
+                  <Award size={13} /> IIIT Bangalore Capstone Project
                 </span>
               </div>
               <span className="font-mono text-xs text-slate-300">
-                Executive PG in Data Science & AI
+                Executive PG in Data Science
               </span>
             </div>
 
@@ -111,13 +110,29 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* Dedicated Case Study Link */}
-              <Link
-                href="/projects/supply-chain-analytics"
-                className="inline-flex items-center gap-2 text-sm font-mono px-6 py-3.5 rounded-full bg-accent text-slate-950 font-bold hover:bg-accent-soft transition-all shadow-lg hover:-translate-y-0.5"
-              >
-                Explore Full Case Study Page <ArrowRight size={16} />
-              </Link>
+              <div className="flex items-center gap-3">
+                {flagshipProject.github ? (
+                  <a
+                    href={flagshipProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-3 rounded-full bg-surface border border-line text-slate-100 font-semibold hover:border-accent transition-colors"
+                  >
+                    <Github size={15} /> GitHub Repo
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-3 rounded-full bg-surface border border-line text-slate-300 font-medium opacity-80">
+                    <Github size={15} /> Repo not public yet
+                  </span>
+                )}
+
+                <Link
+                  href="/projects/supply-chain-analytics"
+                  className="inline-flex items-center gap-2 text-sm font-mono px-6 py-3.5 rounded-full bg-accent text-slate-950 font-bold hover:bg-accent-soft transition-all shadow-lg hover:-translate-y-0.5"
+                >
+                  Explore Case Study Page <ArrowRight size={16} />
+                </Link>
+              </div>
             </div>
           </div>
         </Reveal>
@@ -126,7 +141,7 @@ export default function Projects() {
         <div className="space-y-8">
           <Reveal>
             <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-6">
-              Additional Analytics Case Studies & Models
+              Additional Analytics Case Studies & Projects
             </h3>
           </Reveal>
 
@@ -156,7 +171,7 @@ export default function Projects() {
 
                     {/* Action buttons */}
                     <div className="flex items-center gap-3 flex-wrap pt-2 md:pt-0">
-                      {project.github && (
+                      {project.github ? (
                         <a
                           href={project.github}
                           target="_blank"
@@ -165,7 +180,12 @@ export default function Projects() {
                         >
                           <Github size={15} /> GitHub Repo
                         </a>
+                      ) : (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-surface border border-line text-slate-300 font-medium opacity-80">
+                          <Github size={15} /> Repo not public yet
+                        </span>
                       )}
+
                       {project.demo && (
                         <a
                           href={project.demo}
@@ -205,7 +225,7 @@ export default function Projects() {
                     </div>
                     <div className="bg-surface/50 p-4 rounded-xl border border-line/60">
                       <span className="font-mono text-xs text-amber-300 font-semibold uppercase tracking-wider block mb-1">
-                        ⚡ Key Business Impact
+                        ⚡ Business Impact & Outcome
                       </span>
                       <p className="text-slate-100 font-normal leading-relaxed">
                         {project.businessImpact}
