@@ -36,85 +36,85 @@ export default function Projects() {
     <section id="projects" className="section-pad bg-surface/40">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="font-mono text-sm text-accent-soft mb-3">
+          <p className="font-mono text-sm text-accent-soft font-semibold mb-3">
             04 — Featured Projects & Capstone
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4 max-w-2xl">
+          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white mb-4 max-w-2xl">
             Data Analytics Case Studies & Business Impact
           </h2>
-          <p className="text-ink-dim text-base max-w-2xl mb-12">
+          <p className="text-slate-200 text-base md:text-lg max-w-2xl mb-12">
             Structured analytical projects solving real-world business problems using SQL, Python, Power BI, Tableau, and Machine Learning.
           </p>
         </Reveal>
 
-        {/* 🌟 1. FLAGSHIP CAPSTONE HERO CARD (MOST PROMINENT) */}
+        {/* 🌟 1. FLAGSHIP CAPSTONE HERO CARD (HIGH CONTRAST & MAXIMUM VISIBILITY) */}
         <Reveal delay={0.05}>
-          <div className="glass rounded-2xl p-8 md:p-10 border-2 border-accent/60 shadow-glow relative overflow-hidden mb-14 space-y-8">
-            <div aria-hidden="true" className="absolute -top-16 -right-16 h-64 w-64 rounded-full bg-accent/10 blur-[80px]" />
+          <div className="glass rounded-2xl p-8 md:p-10 border-2 border-accent/80 shadow-glow relative overflow-hidden mb-14 space-y-8 bg-surface-2/90">
+            <div aria-hidden="true" className="absolute -top-16 -right-16 h-64 w-64 rounded-full bg-accent/20 blur-[80px]" />
 
             {/* Header badges */}
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-1.5 rounded-full bg-accent text-ink font-bold shadow-md">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-1.5 rounded-full bg-accent text-slate-950 font-bold shadow-md">
                   <Star size={13} /> ⭐ Featured Capstone Project
                 </span>
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-full glass border border-accent/30 text-accent-soft">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-1.5 rounded-full glass border border-accent/50 text-accent-soft font-medium">
                   <Award size={13} /> IIIT Bangalore Final Team Capstone
                 </span>
               </div>
-              <span className="font-mono text-xs text-ink-dim">
+              <span className="font-mono text-xs text-slate-300">
                 Executive PG in Data Science & AI
               </span>
             </div>
 
             {/* Title & Tagline */}
             <div className="space-y-3">
-              <h3 className="font-display text-2xl md:text-4xl font-bold text-ink">
+              <h3 className="font-display text-2xl md:text-4xl font-bold text-white leading-tight">
                 {flagshipProject.title}
               </h3>
-              <p className="text-accent-soft font-mono text-base md:text-lg">
+              <p className="text-amber-300 font-mono text-base md:text-lg font-medium leading-relaxed">
                 {flagshipProject.tagline}
               </p>
             </div>
 
             {/* Summary Objective & Impact */}
-            <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-line/60">
-              <div className="space-y-2">
-                <span className="font-mono text-xs text-ink-dim uppercase tracking-wider block">
+            <div className="grid md:grid-cols-2 gap-6 pt-5 border-t border-line">
+              <div className="space-y-2 bg-surface/60 p-5 rounded-xl border border-line">
+                <span className="font-mono text-xs text-sky-300 font-semibold uppercase tracking-wider block">
                   🎯 Business Objective
                 </span>
-                <p className="text-ink text-sm md:text-base leading-relaxed font-medium">
+                <p className="text-slate-100 text-sm md:text-base leading-relaxed">
                   {flagshipProject.businessObjective}
                 </p>
               </div>
 
-              <div className="space-y-2">
-                <span className="font-mono text-xs text-ink-dim uppercase tracking-wider block">
+              <div className="space-y-2 bg-surface/60 p-5 rounded-xl border border-line">
+                <span className="font-mono text-xs text-amber-300 font-semibold uppercase tracking-wider block">
                   ⚡ Key Business Impact
                 </span>
-                <p className="text-accent-soft text-sm md:text-base leading-relaxed font-medium">
+                <p className="text-slate-100 text-sm md:text-base leading-relaxed">
                   {flagshipProject.businessImpact}
                 </p>
               </div>
             </div>
 
-            {/* Tools Badges */}
+            {/* Tools Badges & CTA */}
             <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
               <div className="flex flex-wrap gap-2">
                 {flagshipProject.toolsUsed.map((tool) => (
                   <span
                     key={tool}
-                    className="text-xs font-mono px-3 py-1.5 rounded-lg bg-surface-2 border border-line text-ink font-medium"
+                    className="text-xs font-mono px-3.5 py-1.5 rounded-lg bg-surface border border-line text-slate-100 font-semibold"
                   >
                     {tool}
                   </span>
                 ))}
               </div>
 
-              {/* Dedicated Case Study Route Link Button */}
+              {/* Dedicated Case Study Link */}
               <Link
                 href="/projects/supply-chain-analytics"
-                className="inline-flex items-center gap-2 text-sm font-mono px-6 py-3.5 rounded-full bg-accent text-ink font-semibold hover:bg-accent-soft transition-all shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 text-sm font-mono px-6 py-3.5 rounded-full bg-accent text-slate-950 font-bold hover:bg-accent-soft transition-all shadow-lg hover:-translate-y-0.5"
               >
                 Explore Full Case Study Page <ArrowRight size={16} />
               </Link>
@@ -125,7 +125,7 @@ export default function Projects() {
         {/* 2. OTHER ANALYTICAL PROJECTS */}
         <div className="space-y-8">
           <Reveal>
-            <h3 className="font-display text-xl font-semibold text-ink mb-6">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-6">
               Additional Analytics Case Studies & Models
             </h3>
           </Reveal>
@@ -135,21 +135,21 @@ export default function Projects() {
 
             return (
               <Reveal delay={index * 0.08} key={project.title}>
-                <div className="glass rounded-xl2 p-6 md:p-8 border border-line/60 hover:border-accent/40 transition-all duration-300">
+                <div className="glass rounded-xl2 p-6 md:p-8 border border-line/80 hover:border-accent/60 transition-all duration-300 bg-surface-2/60">
                   {/* Header Row */}
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="space-y-1.5 flex-1">
                       <div className="flex items-center gap-3 flex-wrap">
-                        <h4 className="font-display text-xl font-semibold text-ink">
+                        <h4 className="font-display text-xl font-bold text-white">
                           {project.title}
                         </h4>
                         {project.featured && (
-                          <span className="inline-flex items-center gap-1 text-[11px] font-mono px-3 py-0.5 rounded-full bg-accent/20 text-accent-soft border border-accent/30">
+                          <span className="inline-flex items-center gap-1 text-[11px] font-mono px-3 py-0.5 rounded-full bg-accent/20 text-accent-soft border border-accent/40 font-semibold">
                             <Star size={11} /> Featured
                           </span>
                         )}
                       </div>
-                      <p className="text-accent-soft font-mono text-xs md:text-sm">
+                      <p className="text-amber-300 font-mono text-xs md:text-sm font-medium">
                         {project.tagline}
                       </p>
                     </div>
@@ -161,7 +161,7 @@ export default function Projects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-surface-2 hover:bg-ink hover:text-base border border-line transition-colors"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-surface hover:bg-ink hover:text-slate-950 text-slate-200 border border-line transition-colors font-medium"
                         >
                           <Github size={15} /> GitHub Repo
                         </a>
@@ -171,14 +171,14 @@ export default function Projects() {
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-accent/20 text-accent-soft hover:bg-accent hover:text-ink border border-accent/30 transition-colors"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-accent/20 text-accent-soft hover:bg-accent hover:text-slate-950 border border-accent/40 transition-colors font-medium"
                         >
                           <ExternalLink size={15} /> Live Demo
                         </a>
                       )}
                       <button
                         onClick={() => toggleExpand(index)}
-                        className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-2 rounded-lg bg-ink text-base hover:bg-accent-soft transition-colors ml-auto md:ml-0"
+                        className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-2 rounded-lg bg-ink text-slate-950 font-bold hover:bg-accent-soft transition-colors ml-auto md:ml-0"
                       >
                         {isExpanded ? (
                           <>
@@ -194,20 +194,20 @@ export default function Projects() {
                   </div>
 
                   {/* Summary Badges & Objective */}
-                  <div className="mt-5 pt-5 border-t border-line/50 grid md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <span className="font-mono text-xs text-ink-dim uppercase tracking-wider block mb-1">
+                  <div className="mt-5 pt-5 border-t border-line grid md:grid-cols-2 gap-4 text-sm">
+                    <div className="bg-surface/50 p-4 rounded-xl border border-line/60">
+                      <span className="font-mono text-xs text-sky-300 font-semibold uppercase tracking-wider block mb-1">
                         🎯 Business Objective
                       </span>
-                      <p className="text-ink font-medium leading-relaxed">
+                      <p className="text-slate-100 font-normal leading-relaxed">
                         {project.businessObjective}
                       </p>
                     </div>
-                    <div>
-                      <span className="font-mono text-xs text-ink-dim uppercase tracking-wider block mb-1">
+                    <div className="bg-surface/50 p-4 rounded-xl border border-line/60">
+                      <span className="font-mono text-xs text-amber-300 font-semibold uppercase tracking-wider block mb-1">
                         ⚡ Key Business Impact
                       </span>
-                      <p className="text-accent-soft font-medium leading-relaxed">
+                      <p className="text-slate-100 font-normal leading-relaxed">
                         {project.businessImpact}
                       </p>
                     </div>
@@ -218,7 +218,7 @@ export default function Projects() {
                     {project.toolsUsed.map((tool) => (
                       <span
                         key={tool}
-                        className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-surface-2 border border-line text-ink-dim"
+                        className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-surface border border-line text-slate-200 font-medium"
                       >
                         {tool}
                       </span>
@@ -237,23 +237,23 @@ export default function Projects() {
                       >
                         <div className="grid md:grid-cols-2 gap-6">
                           {/* Problem & Objective */}
-                          <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
-                            <h5 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                          <div className="glass rounded-xl p-5 border border-line space-y-3">
+                            <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
                               <Target size={16} className="text-accent-soft" />
                               Problem Statement
                             </h5>
-                            <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                            <p className="text-slate-200 text-xs md:text-sm leading-relaxed">
                               {project.problem}
                             </p>
                           </div>
 
                           {/* Dataset & Tools */}
-                          <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
-                            <h5 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                          <div className="glass rounded-xl p-5 border border-line space-y-3">
+                            <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
                               <Database size={16} className="text-accent-soft" />
                               Dataset & Data Sources
                             </h5>
-                            <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                            <p className="text-slate-200 text-xs md:text-sm leading-relaxed">
                               {project.dataset}
                             </p>
                           </div>
@@ -261,31 +261,31 @@ export default function Projects() {
 
                         <div className="grid md:grid-cols-2 gap-6">
                           {/* Approach */}
-                          <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
-                            <h5 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                          <div className="glass rounded-xl p-5 border border-line space-y-3">
+                            <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
                               <Wrench size={16} className="text-accent-soft" />
                               Analytical Approach & Execution
                             </h5>
-                            <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                            <p className="text-slate-200 text-xs md:text-sm leading-relaxed">
                               {project.approach}
                             </p>
                           </div>
 
                           {/* Dashboard */}
-                          <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
-                            <h5 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                          <div className="glass rounded-xl p-5 border border-line space-y-3">
+                            <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
                               <LayoutDashboard size={16} className="text-accent-soft" />
                               Dashboard & Reporting Visuals
                             </h5>
-                            <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                            <p className="text-slate-200 text-xs md:text-sm leading-relaxed">
                               {project.dashboard}
                             </p>
                           </div>
                         </div>
 
                         {/* Key Insights */}
-                        <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
-                          <h5 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                        <div className="glass rounded-xl p-5 border border-line space-y-3">
+                          <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
                             <TrendingUp size={16} className="text-accent-soft" />
                             Key Analytical Insights
                           </h5>
@@ -293,7 +293,7 @@ export default function Projects() {
                             {project.keyInsights.map((insight, idx) => (
                               <li
                                 key={idx}
-                                className="text-ink-dim text-xs md:text-sm leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-accent-soft"
+                                className="text-slate-200 text-xs md:text-sm leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-accent-soft"
                               >
                                 {insight}
                               </li>
@@ -303,11 +303,11 @@ export default function Projects() {
 
                         {/* Learning */}
                         <div className="glass rounded-xl p-5 border-l-4 border-accent space-y-2">
-                          <h5 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                          <h5 className="font-display font-semibold text-sm text-white flex items-center gap-2">
                             <Lightbulb size={16} className="text-accent-soft" />
                             Key Learning & Takeaway
                           </h5>
-                          <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                          <p className="text-slate-200 text-xs md:text-sm leading-relaxed">
                             {project.learning}
                           </p>
                         </div>
