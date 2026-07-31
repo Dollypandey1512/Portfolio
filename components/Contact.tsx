@@ -117,6 +117,9 @@ export default function Contact() {
               </a>
               <a
                 href={profile.links.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
                 className="flex items-center gap-3 text-sm hover:text-accent-soft transition-colors mt-auto pt-4 border-t border-line"
               >
                 <Download size={17} /> Download resume (PDF)

@@ -111,6 +111,9 @@ export default function Hero() {
         >
           <a
             href={profile.links.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
             className="group inline-flex items-center gap-2 rounded-full bg-ink text-base px-5 py-3 text-sm font-medium hover:bg-accent-soft transition-all hover:-translate-y-0.5"
           >
             <Download size={16} /> Download Resume
