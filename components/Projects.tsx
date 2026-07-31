@@ -1,118 +1,235 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
-import { Github, ExternalLink, Star } from "lucide-react";
-import { projects } from "@/lib/data";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Github,
+  ExternalLink,
+  Star,
+  ChevronDown,
+  ChevronUp,
+  Target,
+  Database,
+  Wrench,
+  TrendingUp,
+  Lightbulb,
+  LayoutDashboard,
+  Zap,
+} from "lucide-react";
+import { projects, Project } from "@/lib/data";
 import Reveal from "./Reveal";
 
 export default function Projects() {
-  const allTech = useMemo(() => {
-    const set = new Set<string>();
-    projects.forEach((p) => p.tech.forEach((t) => set.add(t)));
-    return ["All", ...Array.from(set)];
-  }, []);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(0); // First project open by default
 
-  const [filter, setFilter] = useState("All");
-
-  const sorted = useMemo(
-    () =>
-      [...projects].sort((a, b) => Number(b.featured) - Number(a.featured)),
-    []
-  );
-
-  const filtered = sorted.filter(
-    (p) => filter === "All" || p.tech.includes(filter)
-  );
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <section id="projects" className="section-pad bg-surface/40">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <p className="font-mono text-sm text-accent-soft mb-3">
-            04 — Projects
+            04 — Case Studies & Projects
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-8 max-w-xl">
-            Work that made it out of the notebook.
+          <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4 max-w-2xl">
+            Data Analytics Case Studies & Business Impact
           </h2>
+          <p className="text-ink-dim text-base max-w-2xl mb-12">
+            Structured analytical projects solving real-world business problems using SQL, Python, Power BI, Tableau, and Machine Learning.
+          </p>
         </Reveal>
 
-        <Reveal delay={0.05}>
-          <div className="flex flex-wrap gap-2 mb-10">
-            {allTech.map((tech) => (
-              <button
-                key={tech}
-                onClick={() => setFilter(tech)}
-                className={`font-mono text-xs px-3.5 py-1.5 rounded-full border transition-colors ${
-                  filter === tech
-                    ? "bg-ink text-base border-ink"
-                    : "border-line text-ink-dim hover:text-ink hover:border-ink-dim"
-                }`}
-              >
-                {tech}
-              </button>
-            ))}
-          </div>
-        </Reveal>
+        <div className="space-y-8">
+          {projects.map((project: Project, index: number) => {
+            const isExpanded = expandedIndex === index;
 
-        <div className="grid sm:grid-cols-2 gap-6">
-          {filtered.map((project, i) => (
-            <Reveal delay={i * 0.08} key={project.title}>
-              <motion.div
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.2 }}
-                className="glass rounded-xl2 p-6 h-full flex flex-col relative overflow-hidden"
-              >
-                {project.featured && (
-                  <span className="absolute top-5 right-5 inline-flex items-center gap-1 text-[11px] font-mono px-2.5 py-1 rounded-full bg-accent/20 text-accent-soft">
-                    <Star size={11} /> Featured
-                  </span>
-                )}
-                <h3 className="font-display text-lg font-semibold pr-24 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-ink-dim text-sm leading-relaxed mb-5 flex-grow">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-surface-2 border border-line text-ink-dim"
-                    >
-                      {t}
-                    </span>
-                  ))}
+            return (
+              <Reveal delay={index * 0.08} key={project.title}>
+                <div className="glass rounded-xl2 p-6 md:p-8 border border-line/60 hover:border-accent/40 transition-all duration-300">
+                  {/* Header Row */}
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div className="space-y-1.5 flex-1">
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <h3 className="font-display text-xl md:text-2xl font-semibold text-ink">
+                          {project.title}
+                        </h3>
+                        {project.featured && (
+                          <span className="inline-flex items-center gap-1 text-[11px] font-mono px-3 py-0.5 rounded-full bg-accent/20 text-accent-soft border border-accent/30">
+                            <Star size={11} /> Featured Case Study
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-accent-soft font-mono text-sm">
+                        {project.tagline}
+                      </p>
+                    </div>
+
+                    {/* Action buttons */}
+                    <div className="flex items-center gap-3 flex-wrap pt-2 md:pt-0">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-surface-2 hover:bg-ink hover:text-base border border-line transition-colors"
+                        >
+                          <Github size={15} /> GitHub Repo
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3.5 py-2 rounded-lg bg-accent/20 text-accent-soft hover:bg-accent hover:text-ink border border-accent/30 transition-colors"
+                        >
+                          <ExternalLink size={15} /> Live Dashboard
+                        </a>
+                      )}
+                      <button
+                        onClick={() => toggleExpand(index)}
+                        className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-2 rounded-lg bg-ink text-base hover:bg-accent-soft transition-colors ml-auto md:ml-0"
+                      >
+                        {isExpanded ? (
+                          <>
+                            Collapse Details <ChevronUp size={15} />
+                          </>
+                        ) : (
+                          <>
+                            View Full Case Study <ChevronDown size={15} />
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Summary Badges & Objective */}
+                  <div className="mt-5 pt-5 border-t border-line/50 grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <span className="font-mono text-xs text-ink-dim uppercase tracking-wider block mb-1">
+                        🎯 Business Objective
+                      </span>
+                      <p className="text-ink font-medium leading-relaxed">
+                        {project.businessObjective}
+                      </p>
+                    </div>
+                    <div>
+                      <span className="font-mono text-xs text-ink-dim uppercase tracking-wider block mb-1">
+                        ⚡ Key Business Impact
+                      </span>
+                      <p className="text-accent-soft font-medium leading-relaxed">
+                        {project.businessImpact}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Tools list */}
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.toolsUsed.map((tool) => (
+                      <span
+                        key={tool}
+                        className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-surface-2 border border-line text-ink-dim"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Expandable Recruiter-Friendly Deep-Dive */}
+                  <AnimatePresence>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.35 }}
+                        className="overflow-hidden mt-6 pt-6 border-t border-line space-y-6"
+                      >
+                        <div className="grid md:grid-cols-2 gap-6">
+                          {/* Problem & Objective */}
+                          <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
+                            <h4 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                              <Target size={16} className="text-accent-soft" />
+                              Problem Statement
+                            </h4>
+                            <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                              {project.problem}
+                            </p>
+                          </div>
+
+                          {/* Dataset & Tools */}
+                          <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
+                            <h4 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                              <Database size={16} className="text-accent-soft" />
+                              Dataset & Data Sources
+                            </h4>
+                            <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                              {project.dataset}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6">
+                          {/* Approach */}
+                          <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
+                            <h4 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                              <Wrench size={16} className="text-accent-soft" />
+                              Analytical Approach & Execution
+                            </h4>
+                            <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                              {project.approach}
+                            </p>
+                          </div>
+
+                          {/* Dashboard */}
+                          <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
+                            <h4 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                              <LayoutDashboard size={16} className="text-accent-soft" />
+                              Dashboard & Reporting Visuals
+                            </h4>
+                            <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                              {project.dashboard}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Key Insights */}
+                        <div className="glass rounded-xl p-5 border border-line/60 space-y-3">
+                          <h4 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                            <TrendingUp size={16} className="text-accent-soft" />
+                            Key Analytical Insights
+                          </h4>
+                          <ul className="space-y-2">
+                            {project.keyInsights.map((insight, idx) => (
+                              <li
+                                key={idx}
+                                className="text-ink-dim text-xs md:text-sm leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-accent-soft"
+                              >
+                                {insight}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Learning */}
+                        <div className="glass rounded-xl p-5 border-l-4 border-accent space-y-2">
+                          <h4 className="font-display font-semibold text-sm text-ink flex items-center gap-2">
+                            <Lightbulb size={16} className="text-accent-soft" />
+                            Key Learning & Engineering Takeaway
+                          </h4>
+                          <p className="text-ink-dim text-xs md:text-sm leading-relaxed">
+                            {project.learning}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-                <div className="flex gap-3 mt-auto items-center">
-                  {project.github === "#" ? (
-                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-dim/60 font-mono text-xs">
-                      <Github size={15} /> repo not public yet
-                    </span>
-                  ) : (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-accent-soft transition-colors"
-                    >
-                      <Github size={15} /> Code
-                    </a>
-                  )}
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-accent-soft transition-colors"
-                    >
-                      <ExternalLink size={15} /> Live Demo
-                    </a>
-                  )}
-                </div>
-              </motion.div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
