@@ -95,6 +95,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <head>
+        <meta name="image" property="og:image" content={ogImageUrl} />
         <meta property="og:title" content="Dolly Pandey | Data Analyst Portfolio" />
         <meta
           property="og:description"
@@ -104,7 +105,6 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:image" content={ogImageUrl} />
         <meta property="og:image:secure_url" content={ogImageUrl} />
-        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
