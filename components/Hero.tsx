@@ -79,7 +79,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-6 max-w-2xl mx-auto text-ink-dim text-base md:text-lg leading-relaxed font-normal"
+          className="mt-6 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-normal"
+          style={{ color: "#ffffff" }}
         >
           {profile.headline}
         </motion.p>
